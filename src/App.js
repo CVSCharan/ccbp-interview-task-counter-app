@@ -30,7 +30,6 @@ class App extends Component {
           </div>
         </div>
         <p className="para2">Number of Registrations Counter: {counter}</p>
-        <p className="para2">{counter}</p>
       </div>
     );
   }
