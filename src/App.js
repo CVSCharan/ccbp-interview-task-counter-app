@@ -11,7 +11,7 @@ class App extends Component {
     const currentDate = new Date();
     const { counter } = this.state;
     const diffTime = Math.abs(currentDate - regDate);
-    this.setState({ counter: diffTime * 6 });
+    this.setState({ counter: Math.ceil(diffTime / 1000) * 6 });
 
     return (
       <div className="app">
@@ -29,7 +29,10 @@ class App extends Component {
             </p>
           </div>
         </div>
-        <p className="para2">Number of Registrations Counter: {counter}</p>
+        <div className="reg-date">
+          <p className="para1">Number of Registrations Counter: </p>
+          <p className="para2"> {counter}</p>
+        </div>
       </div>
     );
   }
